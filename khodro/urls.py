@@ -5,8 +5,8 @@ from . import views
 app_name = 'khodro'
 
 urlpatterns = [
-    path('', views.KhodroListCreateView.as_view(), name="list-create"),
-    path('<int:pk>/', views.KhodroRetrieveUpdateDestroyView.as_view(), name="get-update-delete"),
+    path('', views.KhodroListCreateView.as_view(), name="list"),
+    path('<int:pk>/', views.KhodroRetrieveUpdateDestroyView.as_view(), name="detail"),
 ]
 
 # router = SimpleRouter()
