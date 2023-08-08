@@ -4,10 +4,13 @@ from . import views
 
 app_name = 'khodro'
 
-urlpatterns = []
+urlpatterns = [
+    path('', views.KhodroListCreateView.as_view(), name="list-create"),
+    path('<int:pk>/', views.KhodroRetrieveUpdateDestroyView.as_view(), name="get-update-delete"),
+]
 
-router = SimpleRouter()
+# router = SimpleRouter()
 
-router.register("", views.KhodroViewSet)
+# router.register("", views.KhodroViewSet)
 
-urlpatterns += router.urls
+# urlpatterns += router.urls
